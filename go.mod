@@ -1,4 +1,4 @@
-module halfs
+module github.com/malcolmseyd/halfs
 
 go 1.22.2
 

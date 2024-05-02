@@ -4,7 +4,8 @@ import (
 	"bytes"
 	"crypto/rand"
 	"fmt"
-	"halfs/store"
+
+	"github.com/malcolmseyd/halfs/store"
 )
 
 func main() {
