@@ -2,22 +2,23 @@ package main
 
 import (
 	"bytes"
+	"crypto/rand"
 	"fmt"
 	"halfs/store"
 )
 
-const maxBlobSize = 2958
-
 func main() {
 	// blob := []byte("https://seyd.ca")
 	// blob := []byte{}
-	// for i := 0; i < maxBlobSize; i++ {
+	// for i := 0; i < 12456; i++ {
 	// 	blob = append(blob, byte(i%256))
 	// }
-	blob := make([]byte, maxBlobSize)
-	for i := range blob {
-		blob[i] = 0xFF
-	}
+	blob := make([]byte, 1000000)
+	rand.Read(blob)
+	// blob := make([]byte, 10000)
+	// for i := range blob {
+	// 	blob[i] = 'A'
+	// }
 	// fmt.Println("blob", string(blob))
 	ref, err := store.Put(blob)
 	if err != nil {
